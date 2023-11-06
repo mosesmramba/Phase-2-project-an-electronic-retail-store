@@ -1,0 +1,17 @@
+{
+  "eproducts": [
+    {
+      "id":1,
+      "name":"Lenovo",
+      "category":"Laptop",
+      "price":33000,
+      "image":"https://www.ket.co.ke/wp-content/uploads/2023/10/lenovo-ideapad-3-intel-celeron-n4020-4gb-1tb-hdd-15.6-inches-81wq007gue.webp",
+      "specifications":{
+        "processor":"Celeron N4020",
+        "memory":"4GB Soldered DDR4-2400 not upgradable",
+        "storage":"1TB HDD",
+        "Operating System":"Free DOS"
+      }
+    }
+  ]
+}
