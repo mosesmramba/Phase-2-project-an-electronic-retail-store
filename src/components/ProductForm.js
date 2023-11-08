@@ -4,9 +4,22 @@ export default function AddProduct() {
   const [product, setProduct] = useState({
     name: '',
     category: '',
-    price: 0,
+    price: '',
     image: '',
-    specifications: [], // Store specifications as an array
+    specifications: {
+        'Camera Resolution':'',
+        Condition:'',
+        'Video Resolution':'',
+        Type:'',
+        'Connection Type':'',
+        Storage:'',
+        Brand: '',
+        Duplex: '',
+        Paper: '',
+        'Print Technology': '',
+        Warranty:'',
+        'Printer Ports':'',
+    }, // Store specifications as an array
   });
 
   const [isAdding, setIsAdding] = useState(false);
@@ -21,6 +34,19 @@ export default function AddProduct() {
 
   const handleAddProduct = () => {
     setIsAdding(true);
+  };
+  const handleSpecification=(e)=>{
+    
+    const {name, value}=e.target;
+    setProduct((prevProduct)=>({
+      ...prevProduct,
+      specifications:{
+        ...prevProduct.specifications,[name]:value,
+      }
+    }));
+    if (!specificationsToShow.includes(name)) {
+      setSpecificationsToShow([...specificationsToShow, name]);
+    }
   };
 
   useEffect(() => {
@@ -98,15 +124,18 @@ export default function AddProduct() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="specifications">Specifications:</label>
+            <label htmlFor="specifications">Specifications</label>
+            <label htmlFor="brand">Brand:
             <input
               type="text"
-              id="specifications"
-              name="specifications"
-              value={product.specifications}
-              onChange={handleInputChange}
+              id="brand"
+              name="Brand"
+              value={product.specifications.Brand}
+              onChange={handleSpecification}
               className="form-control"
             />
+            </label>
+  
           </div>
           <button
             type="button"

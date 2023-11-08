@@ -93,6 +93,7 @@ export default function Product() {
         <p>Total Price: ksh{totalPrice}</p> {/* Display the total price */}
         <h4>Specifications:</h4>
         <ul>
+          {console.log('specifications',specificationsToShow)}
           {specificationsToShow.map((specification) => (
             <li key={specification}>
               <strong>{specification}:</strong> {product.specifications[specification]}

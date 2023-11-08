@@ -87,7 +87,7 @@
       "id": 7,
       "name": "Samsung QA75QN90BAUXEKE 75inch 4K QLED TV",
       "category": "TV",
-      "price": 121000,
+      "price": 421000,
       "image": "https://www.winnings.com.au/ak/2/2/c/8/22c8d6a48760f85b1c66d2009edabd2893069d55_samsung_75_inch_qn90b_4k_uhd_neo_qled_smart_tv_qa75qn90bawxxy_1_35328449_high-high.jpeg",
       "specifications": {
         "Brand": "Samsung",
@@ -101,7 +101,7 @@
       "id": 8,
       "name": "HP color LaserJet Pro MFP M283fdw Printer",
       "category": "Printers",
-      "price": "43000",
+      "price": 42000,
       "image": "https://dovecomputers.co.ke/wp-content/uploads/2021/01/m283fdw.jpg",
       "specifications": {
         "Brand": "HP",
@@ -139,6 +139,90 @@
         "Battery": "Li-ion 4300 mAh",
         "Warranty": "2 years"
       }
+    },
+    {
+      "name": "LG Top Mount Freezer 359L Refrigerator",
+      "category": "",
+      "price": "65000",
+      "image": "https://www.lg.com/id/images/kulkas/md07544246/gallery/MZ-01.jpg",
+      "specifications": {
+        "Camera Resolution": "",
+        "Condition": "",
+        "Video Resolution": "",
+        "Type": "",
+        "Connection Type": "",
+        "Storage": "",
+        "Brand": "LG",
+        "Duplex": "",
+        "Paper": "",
+        "Print Technology": "",
+        "Warranty": "",
+        "Printer Ports": ""
+      },
+      "id": 11
+    },
+    {
+      "name": "LG Top Mount Freezer 359L Refrigerator",
+      "category": "",
+      "price": "65000",
+      "image": "https://www.lg.com/id/images/kulkas/md07544246/gallery/MZ-01.jpg",
+      "specifications": {
+        "Camera Resolution": "",
+        "Condition": "",
+        "Video Resolution": "",
+        "Type": "",
+        "Connection Type": "",
+        "Storage": "",
+        "Brand": "LG",
+        "Duplex": "",
+        "Paper": "",
+        "Print Technology": "",
+        "Warranty": "",
+        "Printer Ports": ""
+      },
+      "id": 12
+    },
+    {
+      "name": "LG Top Mount Freezer 359L Refrigerator",
+      "category": "",
+      "price": "60000",
+      "image": "https://www.lg.com/id/images/kulkas/md07544246/gallery/MZ-01.jpg",
+      "specifications": {
+        "Camera Resolution": "",
+        "Condition": "",
+        "Video Resolution": "",
+        "Type": "",
+        "Connection Type": "",
+        "Storage": "",
+        "Brand": "LG",
+        "Duplex": "",
+        "Paper": "",
+        "Print Technology": "",
+        "Warranty": "",
+        "Printer Ports": ""
+      },
+      "id": 13
+    },
+    {
+      "name": "LG Top Mount Freezer 359L Refrigerator",
+      "category": "",
+      "price": "59999",
+      "image": "https://www.lg.com/id/images/kulkas/md07544246/gallery/MZ-01.jpg",
+      "specifications": {
+        "Camera Resolution": "",
+        "Condition": "",
+        "Video Resolution": "",
+        "Type": "",
+        "Connection Type": "",
+        "Storage": "",
+        "Brand": "LG",
+        "Duplex": "",
+        "Paper": "",
+        "Print Technology": "",
+        "Warranty": "",
+        "Printer Ports": ""
+      },
+      "id": 14
     }
   ]
 }

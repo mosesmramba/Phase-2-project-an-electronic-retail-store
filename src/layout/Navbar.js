@@ -16,7 +16,7 @@ export default function Navbar() {
         <Link class="nav-link" to="/about">About</Link>
         <Link class="nav-link" to="/contact">Contact Us</Link>
         <Link class="nav-link" to="/addproduct">AddProduct</Link>
-        <Link class="nav-link" to="/cart">Cart</Link>
+        
       </div>
     </div>
   </div>
