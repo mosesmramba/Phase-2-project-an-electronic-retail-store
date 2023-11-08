@@ -9,6 +9,7 @@ import Product from './components/Product';
 import NoPage from './pages/NoPage';
 import AddProduct from './pages/AddProduct';
 import Cart from './pages/Cart';
+import ShoppingCart from './components/ShoppingCart';
 
 export default function App() {
   return (
@@ -21,7 +22,7 @@ export default function App() {
          <Route path='contact' element={<Contact/>}/>
          <Route path='product/:id' element={<Product/>}/>
          <Route path='addproduct' element={<AddProduct/>}/>
-         <Route path='cart' element={<Cart/>}/>
+         <Route path='cart' element={<ShoppingCart/>}/>
          <Route path='*' element={<NoPage/>}/>
         </Route>
        </Routes> 

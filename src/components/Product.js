@@ -101,61 +101,60 @@ export default function Product() {
         </ul>
         <div>
           <button onClick={() => setQuantity(quantity - 1)} className='btn btn-light me-1' type='button'>-</button>
-          <input className='btn btn-light me-1' type='button' value={quantity} />
+          <input className='btn btn-light me-1' type='number' value={quantity} readOnly />
           <button onClick={() => setQuantity(quantity + 1)} className='btn btn-light me-1' type='button'>+</button>
         </div>
         {isEditing ? (
-         <div className="container mt-5 mb-5">
-         <div>
-           <input
-             type='text'
-             name='name'
-             value={editedProduct.name}
-             onChange={handleInputChange}
-             style={{ marginBottom: '10px' }}
-           />
-         </div>
-         <div>
-           <input
-             type='text'
-             name='category'
-             value={editedProduct.category}
-             onChange={handleInputChange}
-             style={{ marginBottom: '10px' }}
-           />
-         </div>
-         <div>
-           <input
-             type='number'
-             name='price'
-             value={editedProduct.price}
-             onChange={handleInputChange}
-             style={{ marginBottom: '10px' }}
-           />
-         </div>
-         <div>
-           <input
-             type='img url'
-             name='image url'
-             value={editedProduct.image}
-             onChange={handleInputChange}
-             style={{ marginBottom: '10px' }}
-           />
-         </div>
-         <div>
-           <input
-             type='text'
-             name='specifications'
-             value={editedProduct.specifications}
-             onChange={handleInputChange}
-             style={{ marginBottom: '10px' }}
-           />
-         </div>
-         <div>
-           <button onClick={handleSaveEdit}>Save</button>
-         </div>
-       </div>
-       
+          <div className="container mt-5 mb-5">
+            <div>
+              <input
+                type='text'
+                name='name'
+                value={editedProduct.name}
+                onChange={handleInputChange}
+                style={{ marginBottom: '10px' }}
+              />
+            </div>
+            <div>
+              <input
+                type='text'
+                name='category'
+                value={editedProduct.category}
+                onChange={handleInputChange}
+                style={{ marginBottom: '10px' }}
+              />
+            </div>
+            <div>
+              <input
+                type='number'
+                name='price'
+                value={editedProduct.price}
+                onChange={handleInputChange}
+                style={{ marginBottom: '10px' }}
+              />
+            </div>
+            <div>
+              <input
+                type='text'
+                name='image'
+                value={editedProduct.image}
+                onChange={handleInputChange}
+                style={{ marginBottom: '10px' }}
+              />
+            </div>
+            <div>
+              <input
+                type='text'
+                name='specifications'
+                value={editedProduct.specifications}
+                onChange={handleInputChange}
+                style={{ marginBottom: '10px' }}
+              />
+            </div>
+            <div>
+              <button onClick={handleSaveEdit}>Save</button>
+            </div>
+          </div>
         ) : (
           <div className=''>
             <button onClick={handleEditClick}>Edit</button>
