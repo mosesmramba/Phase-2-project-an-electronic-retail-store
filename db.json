@@ -139,18 +139,6 @@
         "Battery": "Li-ion 4300 mAh",
         "Warranty": "2 years"
       }
-    },
-    {
-      "name": "LG Top Mount Freezer 359L Refrigerator",
-      "category": "Home Appliance",
-      "price": "139995",
-      "image": "https://www.lg.com/id/images/kulkas/md07544246/gallery/MZ-01.jpg",
-      "specifications": {
-        "i": "Flat Door",
-        "ii": "Pocket Handle",
-        "iii": "Metal deco controller"
-      },
-      "id": 11
     }
   ]
 }

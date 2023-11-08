@@ -5,6 +5,7 @@ export default function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0); // State to keep track of the total price
   const [isEditing, setIsEditing] = useState(false);
   const [editedProduct, setEditedProduct] = useState({});
 
@@ -14,6 +15,13 @@ export default function Product() {
       .then((productData) => setProduct(productData))
       .catch((error) => console.error("Error fetching data: ", error));
   }, [id]);
+
+  useEffect(() => {
+    // Update the total price when quantity or product price changes
+    if (product) {
+      setTotalPrice(product.price * quantity);
+    }
+  }, [product, quantity]);
 
   if (!product) {
     return <p>Loading...</p>;
@@ -40,7 +48,6 @@ export default function Product() {
   };
 
   const handleSaveEdit = () => {
-    // Send a PATCH request to update the product
     fetch(`http://localhost:7000/eproducts/${id}`, {
       method: "PATCH",
       headers: {
@@ -54,6 +61,16 @@ export default function Product() {
         setIsEditing(false);
       })
       .catch((error) => console.error("Error editing product: ", error));
+  };
+
+  const handleDeleteProduct = () => {
+    fetch(`http://localhost:7000/eproducts/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        // Handle successful deletion, e.g., navigate back to the product list page
+      })
+      .catch((error) => console.error("Error deleting product: ", error));
   };
 
   const handleInputChange = (e) => {
@@ -73,6 +90,7 @@ export default function Product() {
       <div className='col-md-6 card'>
         <h5>Category: {product.category}</h5>
         <p>Price: ksh{product.price}</p>
+        <p>Total Price: ksh{totalPrice}</p> {/* Display the total price */}
         <h4>Specifications:</h4>
         <ul>
           {specificationsToShow.map((specification) => (
@@ -87,19 +105,61 @@ export default function Product() {
           <button onClick={() => setQuantity(quantity + 1)} className='btn btn-light me-1' type='button'>+</button>
         </div>
         {isEditing ? (
-          <div>
-            <input
-              type='text'
-              name='name'
-              value={editedProduct.name}
-              onChange={handleInputChange}
-            />
-            {/* Add input fields for other properties you want to edit */}
-            <button onClick={handleSaveEdit}>Save</button>
-          </div>
+         <div className="container mt-5 mb-5">
+         <div>
+           <input
+             type='text'
+             name='name'
+             value={editedProduct.name}
+             onChange={handleInputChange}
+             style={{ marginBottom: '10px' }}
+           />
+         </div>
+         <div>
+           <input
+             type='text'
+             name='category'
+             value={editedProduct.category}
+             onChange={handleInputChange}
+             style={{ marginBottom: '10px' }}
+           />
+         </div>
+         <div>
+           <input
+             type='number'
+             name='price'
+             value={editedProduct.price}
+             onChange={handleInputChange}
+             style={{ marginBottom: '10px' }}
+           />
+         </div>
+         <div>
+           <input
+             type='img url'
+             name='image url'
+             value={editedProduct.image}
+             onChange={handleInputChange}
+             style={{ marginBottom: '10px' }}
+           />
+         </div>
+         <div>
+           <input
+             type='text'
+             name='specifications'
+             value={editedProduct.specifications}
+             onChange={handleInputChange}
+             style={{ marginBottom: '10px' }}
+           />
+         </div>
+         <div>
+           <button onClick={handleSaveEdit}>Save</button>
+         </div>
+       </div>
+       
         ) : (
           <div className=''>
             <button onClick={handleEditClick}>Edit</button>
+            <button onClick={handleDeleteProduct}>Delete</button>
           </div>
         )}
       </div>

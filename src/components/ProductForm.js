@@ -6,15 +6,19 @@ export default function AddProduct() {
     category: '',
     price: 0,
     image: '',
-    specifications: {},
+    specifications: [], // Store specifications as an array
   });
 
   const [isAdding, setIsAdding] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setProduct({ ...product, [name]: value,
+    setProduct({
+      ...product,
+      [name]: value,
     });
   };
+
   const handleAddProduct = () => {
     setIsAdding(true);
   };
@@ -23,7 +27,7 @@ export default function AddProduct() {
     if (isAdding) {
       fetch('http://localhost:7000/eproducts', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json', },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(product),
       })
         .then((response) => response.json())
@@ -40,10 +44,10 @@ export default function AddProduct() {
 
   return (
     <div className="container row mt-5 mb-5">
-      <div className='col-md-6 bg-warning'>
-        <h1 className="font-monospace  text-center">Add Product</h1>
+      <div className="col-md-6 bg-warning">
+        <h1 className="font-monospace text-center">Add Product</h1>
       </div>
-      <div className='col-md-6'>
+      <div className="col-md-6">
         <form>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
@@ -58,14 +62,18 @@ export default function AddProduct() {
           </div>
           <div className="form-group">
             <label htmlFor="category">Category:</label>
-            <input
-              type="text"
-              id="category"
-              name="category"
-              value={product.category}
-              onChange={handleInputChange}
-              className="form-control"
-            />
+              <select class="form-select" aria-label="Default select example">
+                <option selected disabled>Select Category</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Phones">Phones</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Camera">Camera</option>
+                <option value="Audio">Audio</option>
+                <option value="Gaming">Gaming</option>
+                <option value="TV">TV</option>
+                <option value="Printers">Printers</option>
+                <option value="HomeAppliance">HomeAppliance</option>
+              </select>
           </div>
           <div className="form-group">
             <label htmlFor="price">Price:</label>
@@ -90,11 +98,11 @@ export default function AddProduct() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="category">Specification:</label>
+            <label htmlFor="specifications">Specifications:</label>
             <input
               type="text"
-              id="Specifications"
-              name="Specifications"
+              id="specifications"
+              name="specifications"
               value={product.specifications}
               onChange={handleInputChange}
               className="form-control"
