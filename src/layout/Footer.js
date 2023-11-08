@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <div>
+    <div className='container mt-10'>
       <footer>
         <div className="text-center">
           <h2>MOSES</h2>

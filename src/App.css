@@ -1,5 +1,5 @@
 footer{
-  background-color: rgb(218, 140, 68);
+  background-color: rgb(255, 187, 0);
   color: white;
   padding: 5%;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -25,4 +25,30 @@ footer #icons{
 footer #icons a{
   color: white;
   margin-left: 20px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#button {
+  background-color:  rgb(255, 187, 0);
+  color: rgb(0, 0, 0)212;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: rgba(255, 187, 0, 0.678);
 }

@@ -1,145 +1,156 @@
 {
   "eproducts": [
     {
-      "id":1,
-      "name":"Lenovo ideapad 3",
-      "image":"https://www.ket.co.ke/wp-content/uploads/2023/10/lenovo-ideapad-3-intel-celeron-n4020-4gb-1tb-hdd-15.6-inches-81wq007gue.webp",
-      "category":"Laptop",
-      "price":33000,
-      "specifications":{
-        "Processor":"Celeron N4020",
-        "Memory":"4GB Soldered DDR4-2400 not upgradable",
-        "Storage":"1TB HDD",
-        "Operating System":"Free DOS",
-        "Warranty":"12 months"
+      "id": 1,
+      "name": "Lenovo ideapad 3",
+      "image": "https://www.ket.co.ke/wp-content/uploads/2023/10/lenovo-ideapad-3-intel-celeron-n4020-4gb-1tb-hdd-15.6-inches-81wq007gue.webp",
+      "category": "Laptop",
+      "price": 33000,
+      "specifications": {
+        "Processor": "Celeron N4020",
+        "Memory": "4GB Soldered DDR4-2400 not upgradable",
+        "Storage": "1TB HDD",
+        "Operating System": "Free DOS",
+        "Warranty": "12 months"
       }
     },
     {
-      "id":2,
-      "name":"Samsung Galaxy z Fold4",
-      "image":"https://images.samsung.com/africa_fr/smartphones/galaxy-z-fold4/images/galaxy-z-fold4-share-image.jpg",
-      "category":"Phones",
-      "price":233000,
-      "specifications":{
-        "Network":"5G/LTE/GSM/CDMA",
-        "Internal Storage":"512GB",
-        "RAM":"12GB",
-        "Battery":"Li-Po 4400 mAh",
-        "Warranty":"2 years"
+      "id": 2,
+      "name": "Samsung Galaxy z Fold4",
+      "image": "https://images.samsung.com/africa_fr/smartphones/galaxy-z-fold4/images/galaxy-z-fold4-share-image.jpg",
+      "category": "Phones",
+      "price": 233000,
+      "specifications": {
+        "Network": "5G/LTE/GSM/CDMA",
+        "Internal Storage": "512GB",
+        "RAM": "12GB",
+        "Battery": "Li-Po 4400 mAh",
+        "Warranty": "2 years"
       }
     },
     {
-      "id":3,
-      "name":"Samsung Galaxy Tab A7 Lite",
-      "image":"https://thetomorrowtechnology.co.ke/wp-content/uploads/2021/07/Galaxy-Tab-A7-Lite-1.png",
-      "category":"Tablet",
-      "price":21000,
-      "specifications":{
-        "Network":"GSM/HSPA/LTE",
-        "Internal Storage":"32GB",
-        "RAM":"3GB",
-        "Battery":"Li-Po 5100 mAh",
-        "Warranty":"6 months"
+      "id": 3,
+      "name": "Samsung Galaxy Tab A7 Lite",
+      "image": "https://thetomorrowtechnology.co.ke/wp-content/uploads/2021/07/Galaxy-Tab-A7-Lite-1.png",
+      "category": "Tablet",
+      "price": 21000,
+      "specifications": {
+        "Network": "GSM/HSPA/LTE",
+        "Internal Storage": "32GB",
+        "RAM": "3GB",
+        "Battery": "Li-Po 5100 mAh",
+        "Warranty": "6 months"
       }
     },
     {
-      "id":4,
-      "name":"Canon EOS 2000D dslr 18-55mm Camera",
-      "image":"https://glantix.co.ke/cache/large/product/20092/iSR7sOEG6Rbqdl8FsW6wwgoF3b19btXEFGifegWS.webp",
-      "category":"Camera",
-      "price":52000,
-      "specifications":{
-        "Brand":"Canon",
-        "Camera Resolution":"24 Megapixels",
-        "Condition":"New",
-        "Video resolution":"1080/30p",
-        "Warranty":"24 months"
+      "id": 4,
+      "name": "Canon EOS 2000D dslr 18-55mm Camera",
+      "image": "https://glantix.co.ke/cache/large/product/20092/iSR7sOEG6Rbqdl8FsW6wwgoF3b19btXEFGifegWS.webp",
+      "category": "Camera",
+      "price": 52000,
+      "specifications": {
+        "Brand": "Canon",
+        "Camera Resolution": "24 Megapixels",
+        "Condition": "New",
+        "Video resolution": "1080/30p",
+        "Warranty": "24 months"
       }
     },
     {
-      "id":5,
-      "name":"JBL BAR 1000",
-      "image":"https://m.media-amazon.com/images/I/31GuuHaQWUL.jpg",
-      "category":"Audio",
-      "price":111000,
-      "specifications":{
-        "Brand":"JBL",
-        "Condition":"New",
-        "Connection Type":"Bluetooth",
-        "Type":"Sound Bar",
-        "Warranty":"1 year"
+      "id": 5,
+      "name": "JBL BAR 1000",
+      "image": "https://m.media-amazon.com/images/I/31GuuHaQWUL.jpg",
+      "category": "Audio",
+      "price": 111000,
+      "specifications": {
+        "Brand": "JBL",
+        "Condition": "New",
+        "Connection Type": "Bluetooth",
+        "Type": "Sound Bar",
+        "Warranty": "1 year"
       }
     },
     {
-      "id":6,
-      "name":"Playstation 5 standard console",
-      "image":"https://vividgold.co.ke/wp-content/uploads/2023/01/PS5-Standard-825GB-Extra-Controller-White-Pulse-3D-Wireless-Headset.jpg",
-      "category":"Gaming",
-      "price":97000,
-      "specifications":{
-        "Brand":"Playstation",
-        "Condition":"New",
-        "storage":"825GB",
-        "Warranty":"1 year"
+      "id": 6,
+      "name": "Playstation 5 standard console",
+      "image": "https://vividgold.co.ke/wp-content/uploads/2023/01/PS5-Standard-825GB-Extra-Controller-White-Pulse-3D-Wireless-Headset.jpg",
+      "category": "Gaming",
+      "price": 97000,
+      "specifications": {
+        "Brand": "Playstation",
+        "Condition": "New",
+        "storage": "825GB",
+        "Warranty": "1 year"
       }
     },
     {
-      "id":7,
-      "name":"Samsung QA75QN90BAUXEKE 75inch 4K QLED TV",
-      "category":"TV",
-      "price":421000,
-      "image":"https://www.winnings.com.au/ak/2/2/c/8/22c8d6a48760f85b1c66d2009edabd2893069d55_samsung_75_inch_qn90b_4k_uhd_neo_qled_smart_tv_qa75qn90bawxxy_1_35328449_high-high.jpeg",
-      "specifications":{
-        "Brand":"Samsung",
-        "Screen Resolution":"Ultra HD 4k",
-        "Screen type":"LED",
-        "Type":"Smart Tv",
-        "Warranty":"24 months"
+      "id": 7,
+      "name": "Samsung QA75QN90BAUXEKE 75inch 4K QLED TV",
+      "category": "TV",
+      "price": 421000,
+      "image": "https://www.winnings.com.au/ak/2/2/c/8/22c8d6a48760f85b1c66d2009edabd2893069d55_samsung_75_inch_qn90b_4k_uhd_neo_qled_smart_tv_qa75qn90bawxxy_1_35328449_high-high.jpeg",
+      "specifications": {
+        "Brand": "Samsung",
+        "Screen Resolution": "Ultra HD 4k",
+        "Screen type": "LED",
+        "Type": "Smart Tv",
+        "Warranty": "24 months"
       }
     },
     {
-      "id":8,
-      "name":"HP color LaserJet Pro MFP M283fdw Printer",
-      "category":"Printers",
-      "price":42000,
-      "image":"https://dovecomputers.co.ke/wp-content/uploads/2021/01/m283fdw.jpg",
-      "specifications":{
-        "Brand":"HP",
-        "Duplex":"Yes",
-        "Paper":"A4",
-        "Print Technology":"Laserjet",
-        "Warranty":"6 months",
-        "Printer Ports":"USB,Ethernet,WI-FI"
+      "id": 8,
+      "name": "HP color LaserJet Pro MFP M283fdw Printer",
+      "category": "Printers",
+      "price": 42000,
+      "image": "https://dovecomputers.co.ke/wp-content/uploads/2021/01/m283fdw.jpg",
+      "specifications": {
+        "Brand": "HP",
+        "Duplex": "Yes",
+        "Paper": "A4",
+        "Print Technology": "Laserjet",
+        "Warranty": "6 months",
+        "Printer Ports": "USB,Ethernet,WI-FI"
       }
     },
     {
-      "id":9,
-      "name":"RW147 10KG Front Load Washing Machine",
-      "category":"HomeAppliance",
-      "price":82000,
-      "image":"https://cdnprod.mafretailproxy.com/sys-master-root/hcb/hf7/32189649289246/132009_3.jpg_480Wx480H",
-      "specifications":{
-        "Brand":"Ramtons",
-        "Machine Operation":"Fully Automatic",
-        "Tub Type":"Single tub",
-        "Warranty":"6 months",
-        "Type":"Front Load"
+      "id": 9,
+      "name": "RW147 10KG Front Load Washing Machine",
+      "category": "HomeAppliance",
+      "price": 82000,
+      "image": "https://cdnprod.mafretailproxy.com/sys-master-root/hcb/hf7/32189649289246/132009_3.jpg_480Wx480H",
+      "specifications": {
+        "Brand": "Ramtons",
+        "Machine Operation": "Fully Automatic",
+        "Tub Type": "Single tub",
+        "Warranty": "6 months",
+        "Type": "Front Load"
       }
     },
     {
-      "id":10,
-      "name":"iPhone 14 Pro Max",
-      "image":"https://zentechelectronics.co.ke/wp-content/uploads/2022/11/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-gold-220907_inline-3.jpg.large_-3.jpg",
-      "category":"Phones",
-      "price":183000,
-      "specifications":{
-        "Network":"5G/LTE/GSM/CDMA",
-        "Internal Storage":"128GB",
-        "RAM":"6GB",
-        "Battery":"Li-ion 4300 mAh",
-        "Warranty":"2 years"
+      "id": 10,
+      "name": "iPhone 14 Pro Max",
+      "image": "https://zentechelectronics.co.ke/wp-content/uploads/2022/11/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-gold-220907_inline-3.jpg.large_-3.jpg",
+      "category": "Phones",
+      "price": 183000,
+      "specifications": {
+        "Network": "5G/LTE/GSM/CDMA",
+        "Internal Storage": "128GB",
+        "RAM": "6GB",
+        "Battery": "Li-ion 4300 mAh",
+        "Warranty": "2 years"
       }
+    },
+    {
+      "name": "LG Top Mount Freezer 359L Refrigerator",
+      "category": "Home Appliance",
+      "price": "139995",
+      "image": "https://www.lg.com/id/images/kulkas/md07544246/gallery/MZ-01.jpg",
+      "specifications": {
+        "i": "Flat Door",
+        "ii": "Pocket Handle",
+        "iii": "Metal deco controller"
+      },
+      "id": 11
     }
   ]
 }
-

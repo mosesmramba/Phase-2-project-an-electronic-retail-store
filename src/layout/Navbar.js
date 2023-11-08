@@ -6,7 +6,7 @@ export default function Navbar() {
     <div>
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <Link class="navbar-brand" to="#">E-STORE</Link>
+    <Link class="navbar-brand" to="/">E-STORE</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,7 +15,8 @@ export default function Navbar() {
         <Link class="nav-link active" aria-current="page" to="/">Home</Link>
         <Link class="nav-link" to="/about">About</Link>
         <Link class="nav-link" to="/contact">Contact Us</Link>
-        
+        <Link class="nav-link" to="/addproduct">AddProduct</Link>
+        <Link class="nav-link" to="/cart">Cart</Link>
       </div>
     </div>
   </div>
