@@ -42,9 +42,9 @@ export default function Product() {
   const category = product.category;
   const specificationsToShow = categorySpecificationsMap[category] || [];
 
-  const handleAddToCart = (product) => {
-    setCart([...cart, product]);
-  };
+  // const handleAddToCart = (product) => {
+  //   setCart([...cart, product]);
+  // };
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -72,7 +72,6 @@ export default function Product() {
       method: 'DELETE',
     })
       .then(() => {
-        // Handle successful deletion, e.g., navigate back to the product list page
       })
       .catch((error) => console.error('Error deleting product: ', error));
   };
@@ -159,9 +158,9 @@ export default function Product() {
             <button className='bg-dark mt-2' onClick={handleDeleteProduct}>
               Delete
             </button>
-            <button className='mt-2'id='button' onClick={() => handleAddToCart(product)}>
+            {/* <button className='mt-2'id='button' onClick={() => handleAddToCart(product)}>
               Add To Cart
-            </button>
+            </button> */}
           </div>
         )}
       </div>

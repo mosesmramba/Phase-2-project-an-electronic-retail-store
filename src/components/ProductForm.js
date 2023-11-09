@@ -148,6 +148,62 @@ export default function AddProduct() {
             />
             <input
               type="text"
+              name="Internal Storage"
+              value={product.specifications['Internal Storage']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Internal Storage"
+            />
+            <input
+              type="text"
+              name="RAM"
+              value={product.specifications['RAM']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="RAM"
+            />
+             <input
+              type="text"
+              name="Network"
+              value={product.specifications['Network']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Network"
+            />
+             <input
+              type="text"
+              name="Battery"
+              value={product.specifications['Battery']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Battery"
+            />
+             <input
+              type="text"
+              name="Tub Type"
+              value={product.specifications['Tub Type']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Tub Type"
+            />
+             <input
+              type="text"
+              name="Machine Operation"
+              value={product.specifications['Machine Operation']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Machine Operation"
+            />
+             <input
+              type="text"
+              name="Screen Resolution"
+              value={product.specifications['Screen Resolution']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Screen Resolution"
+            />
+            <input
+              type="text"
               name="Video Resolution"
               value={product.specifications['Video Resolution']}
               onChange={handleSpecification}
