@@ -41,6 +41,11 @@ export default function Product() {
 
   const category = product.category;
   const specificationsToShow = categorySpecificationsMap[category] || [];
+  const getProductSpecificationsToShow = (category) => {
+    return categorySpecificationsMap[category] || [];
+  };
+  
+ 
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -166,3 +171,4 @@ export default function Product() {
     </div>
   );
 }
+

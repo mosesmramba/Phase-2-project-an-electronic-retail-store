@@ -1,3 +1,12 @@
+#### The app is a simple Electronic retailk store project, 09/11/2023
+#### **By Moses Mramba**
+## Project Description
+Its a simple Electronic retail store
+
+## Setup/Installation Requirements
+
+## Live Link
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +77,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Known Bugs
+
+## Features
+
+## Usage
+
+## Technologies used
+   - HTML
+    - CSS
+    - JAVA SCRIPT
+    - FONT AWESOME
+    - REACT
+
+## Support and contact details
+   - email :: moses.mramba@student.moringaschool.com
+    - phone :: 0719594119
+
+### License
+*Licenced under the MIT Licence
+Copyright (c) 2023 **MOSES MRAMBA

@@ -33,21 +33,19 @@ export default function AddProduct() {
   };
 
   const handleAddProduct = () => {
+    const product=product;
+    console.log(product);
     setIsAdding(true);
   };
   const handleSpecification=(e)=>{
-    
     const {name, value}=e.target;
     setProduct((prevProduct)=>({
       ...prevProduct,
       specifications:{
-        ...prevProduct.specifications,[name]:value,
+        ...product.specifications,[name]:value,
       }
-    }));
-    if (!specificationsToShow.includes(name)) {
-      setSpecificationsToShow([...specificationsToShow, name]);
-    }
-  };
+    }))
+  }
 
   useEffect(() => {
     if (isAdding) {
