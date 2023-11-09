@@ -7,19 +7,19 @@ export default function AddProduct() {
     price: '',
     image: '',
     specifications: {
-        'Camera Resolution':'',
-        Condition:'',
-        'Video Resolution':'',
-        Type:'',
-        'Connection Type':'',
-        Storage:'',
-        Brand: '',
-        Duplex: '',
-        Paper: '',
-        'Print Technology': '',
-        Warranty:'',
-        'Printer Ports':'',
-    }, // Store specifications as an array
+      'Camera Resolution': '',
+      Condition: '',
+      'Video Resolution': '',
+      Type: '',
+      'Connection Type': '',
+      Storage: '',
+      Brand: '',  // Set a default value here
+      Duplex: '',
+      Paper: '',
+      'Print Technology': '',
+      Warranty: '',
+      'Printer Ports': '',
+    },
   });
 
   const [isAdding, setIsAdding] = useState(false);
@@ -33,19 +33,19 @@ export default function AddProduct() {
   };
 
   const handleAddProduct = () => {
-    const product=product;
-    console.log(product);
     setIsAdding(true);
   };
-  const handleSpecification=(e)=>{
-    const {name, value}=e.target;
-    setProduct((prevProduct)=>({
+
+  const handleSpecification = (e) => {
+    const { name, value } = e.target;
+    setProduct((prevProduct) => ({
       ...prevProduct,
-      specifications:{
-        ...product.specifications,[name]:value,
-      }
-    }))
-  }
+      specifications: {
+        ...prevProduct.specifications,
+        [name]: value,
+      },
+    }));
+  };
 
   useEffect(() => {
     if (isAdding) {
@@ -86,18 +86,18 @@ export default function AddProduct() {
           </div>
           <div className="form-group">
             <label htmlFor="category">Category:</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected disabled>Select Category</option>
-                <option value="Laptop">Laptop</option>
-                <option value="Phones">Phones</option>
-                <option value="Tablet">Tablet</option>
-                <option value="Camera">Camera</option>
-                <option value="Audio">Audio</option>
-                <option value="Gaming">Gaming</option>
-                <option value="TV">TV</option>
-                <option value="Printers">Printers</option>
-                <option value="HomeAppliance">HomeAppliance</option>
-              </select>
+            <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange}>
+              <option selected disabled>Select Category</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Phones">Phones</option>
+              <option value="Tablet">Tablet</option>
+              <option value="Camera">Camera</option>
+              <option value="Audio">Audio</option>
+              <option value="Gaming">Gaming</option>
+              <option value="TV">TV</option>
+              <option value="Printers">Printers</option>
+              <option value="HomeAppliance">HomeAppliance</option>
+            </select>
           </div>
           <div className="form-group">
             <label htmlFor="price">Price:</label>
@@ -122,18 +122,103 @@ export default function AddProduct() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="specifications">Specifications</label>
-            <label htmlFor="brand">Brand:
+            <label>Specifications:</label>
             <input
               type="text"
-              id="brand"
-              name="Brand"
-              value={product.specifications.Brand}
+              name="Camera Resolution"
+              value={product.specifications['Camera Resolution']}
               onChange={handleSpecification}
               className="form-control"
+              placeholder="Camera Resolution"
             />
-            </label>
-  
+            <input
+              type="text"
+              name="Condition"
+              value={product.specifications['Condition']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Condition"
+            />
+            <input
+              type="text"
+              name="Video Resolution"
+              value={product.specifications['Video Resolution']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Video Resolution"
+            />
+            <input
+              type="text"
+              name="Type"
+              value={product.specifications['Type']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Type"
+            />
+            <input
+              type="text"
+              name="Connection Type"
+              value={product.specifications['Connection Type']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Connection Type"
+            />
+            <input
+              type="text"
+              name="Storage"
+              value={product.specifications['Storage']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Storage"
+            />
+            <input
+              type="text"
+              name="Brand"
+              value={product.specifications['Brand']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Brand"
+            />
+            <input
+              type="text"
+              name="Duplex"
+              value={product.specifications['Duplex']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Duplex"
+            />
+            <input
+              type="text"
+              name="Paper"
+              value={product.specifications['Paper']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Paper"
+            />
+            <input
+              type="text"
+              name="Print Technology"
+              value={product.specifications['Print Technology']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Print Technology"
+            />
+            <input
+              type="text"
+              name="Warranty"
+              value={product.specifications['Warranty']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Warranty"
+            />
+            <input
+              type="text"
+              name="Printer Ports"
+              value={product.specifications['Printer Ports']}
+              onChange={handleSpecification}
+              className="form-control"
+              placeholder="Printer Ports"
+            />
           </div>
           <button
             type="button"

@@ -5,19 +5,19 @@ export default function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0); // State to keep track of the total price
+  const [totalPrice, setTotalPrice] = useState(0);
   const [isEditing, setIsEditing] = useState(false);
   const [editedProduct, setEditedProduct] = useState({});
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:7000/eproducts/${id}`)
       .then((response) => response.json())
       .then((productData) => setProduct(productData))
-      .catch((error) => console.error("Error fetching data: ", error));
+      .catch((error) => console.error('Error fetching data: ', error));
   }, [id]);
 
   useEffect(() => {
-    // Update the total price when quantity or product price changes
     if (product) {
       setTotalPrice(product.price * quantity);
     }
@@ -41,11 +41,10 @@ export default function Product() {
 
   const category = product.category;
   const specificationsToShow = categorySpecificationsMap[category] || [];
-  const getProductSpecificationsToShow = (category) => {
-    return categorySpecificationsMap[category] || [];
+
+  const handleAddToCart = (product) => {
+    setCart([...cart, product]);
   };
-  
- 
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -54,9 +53,9 @@ export default function Product() {
 
   const handleSaveEdit = () => {
     fetch(`http://localhost:7000/eproducts/${id}`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(editedProduct),
     })
@@ -65,17 +64,17 @@ export default function Product() {
         setProduct(updatedProduct);
         setIsEditing(false);
       })
-      .catch((error) => console.error("Error editing product: ", error));
+      .catch((error) => console.error('Error editing product: ', error));
   };
 
   const handleDeleteProduct = () => {
     fetch(`http://localhost:7000/eproducts/${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
     })
       .then(() => {
         // Handle successful deletion, e.g., navigate back to the product list page
       })
-      .catch((error) => console.error("Error deleting product: ", error));
+      .catch((error) => console.error('Error deleting product: ', error));
   };
 
   const handleInputChange = (e) => {
@@ -95,31 +94,28 @@ export default function Product() {
       <div className='col-md-6 card'>
         <h5>Category: {product.category}</h5>
         <p>Price: ksh{product.price}</p>
-        <p>Total Price: ksh{totalPrice}</p> {/* Display the total price */}
+        <p>Total Price: ksh{totalPrice}</p>
         <h4>Specifications:</h4>
         <ul>
-          {console.log('specifications',specificationsToShow)}
           {specificationsToShow.map((specification) => (
             <li key={specification}>
-              <strong>{specification}:</strong> {product.specifications[specification]}
+              <strong>{specification}:</strong> {product.specifications[specification] || 'N/A'}
             </li>
           ))}
         </ul>
         <div>
-          <button onClick={() => setQuantity(quantity - 1)} className='btn btn-light me-1' type='button'>-</button>
+          <button onClick={() => setQuantity(quantity - 1)} className='btn btn-light me-1' type='button'>
+            -
+          </button>
           <input className='btn btn-light me-1' type='number' value={quantity} readOnly />
-          <button onClick={() => setQuantity(quantity + 1)} className='btn btn-light me-1' type='button'>+</button>
+          <button onClick={() => setQuantity(quantity + 1)} className='btn btn-light me-1' type='button'>
+            +
+          </button>
         </div>
         {isEditing ? (
-          <div className="container mt-5 mb-5">
+          <div className='container mt-5 mb-5'>
             <div>
-              <input
-                type='text'
-                name='name'
-                value={editedProduct.name}
-                onChange={handleInputChange}
-                style={{ marginBottom: '10px' }}
-              />
+              <input type='text' name='name' value={editedProduct.name} onChange={handleInputChange} style={{ marginBottom: '10px' }} />
             </div>
             <div>
               <input
@@ -140,13 +136,7 @@ export default function Product() {
               />
             </div>
             <div>
-              <input
-                type='text'
-                name='image'
-                value={editedProduct.image}
-                onChange={handleInputChange}
-                style={{ marginBottom: '10px' }}
-              />
+              <input type='text' name='image' value={editedProduct.image} onChange={handleInputChange} style={{ marginBottom: '10px' }} />
             </div>
             <div>
               <input
@@ -163,12 +153,18 @@ export default function Product() {
           </div>
         ) : (
           <div className=''>
-            <button onClick={handleEditClick}>Edit</button>
-            <button onClick={handleDeleteProduct}>Delete</button>
+            <button id='button' onClick={handleEditClick}>
+              Edit
+            </button>
+            <button className='bg-danger' onClick={handleDeleteProduct}>
+              Delete
+            </button>
+            <button id='button' onClick={() => handleAddToCart(product)}>
+              Add To Cart
+            </button>
           </div>
         )}
       </div>
     </div>
   );
 }
-
