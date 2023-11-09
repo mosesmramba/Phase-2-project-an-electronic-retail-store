@@ -94,6 +94,9 @@ A user can delete a product
 A user can edit/update a product
 
 ## Usage
+In the home page a user sees a list of product displayed with the image the product category, add to cart button and its price.When the add to cart button is pressed the product is added to the shopping cart below the list of products.On clicking the image the user is able to see the image clicked and all its specifications.Here there is also an edit button which is used to update the product contents and also a delete button which is used to delete a product.
+In the Navbar there are other pages About,Contact Us and Add Product.The addproduct page is where the user is able to add products.
+
 
 ## Technologies used
    - HTML
