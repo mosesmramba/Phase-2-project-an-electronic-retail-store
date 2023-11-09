@@ -57,7 +57,7 @@ export default function AddProduct() {
 
   useEffect(() => {
     if (isAdding) {
-      fetch('http://localhost:7000/eproducts', {
+      fetch('https://e-retail-store.onrender.com/eproducts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(product),

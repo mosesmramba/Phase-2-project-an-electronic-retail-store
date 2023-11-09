@@ -12,6 +12,7 @@ Its a simple Electronic retail store
     - And your application will run.
 
 ## Live Link
+Deployed backend is in this Url https://e-retail-store.onrender.com/eproducts
 
 # Getting Started with Create React App
 

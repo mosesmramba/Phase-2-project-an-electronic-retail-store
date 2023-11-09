@@ -7,7 +7,7 @@ export default function ProductList() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:7000/eproducts")
+    fetch("https://e-retail-store.onrender.com/eproducts")
       .then((response) => response.json())
       .then((products) => setProducts(products))
       .catch((error) => console.error("Error fetching data: ", error));

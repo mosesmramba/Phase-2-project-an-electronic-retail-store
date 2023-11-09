@@ -12,7 +12,7 @@ export default function Product() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:7000/eproducts/${id}`)
+    fetch(`https://e-retail-store.onrender.com/eproducts/${id}`)
       .then((response) => response.json())
       .then((productData) => setProduct(productData))
       .catch((error) => console.error('Error fetching data: ', error));
@@ -53,7 +53,7 @@ export default function Product() {
   };
 
   const handleSaveEdit = () => {
-    fetch(`http://localhost:7000/eproducts/${id}`, {
+    fetch(`https://e-retail-store.onrender.com/eproducts/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function Product() {
   };
 
   const handleDeleteProduct = () => {
-    fetch(`http://localhost:7000/eproducts/${id}`, {
+    fetch(`https://e-retail-store.onrender.com/eproducts/${id}`, {
       method: 'DELETE',
     })
       .then(() => {
