@@ -152,14 +152,14 @@ export default function Product() {
             </div>
           </div>
         ) : (
-          <div className=''>
-            <button id='button' onClick={handleEditClick}>
+          <div className='container row'>
+            <button className="mt-2" id='button' onClick={handleEditClick}>
               Edit
             </button>
-            <button className='bg-danger' onClick={handleDeleteProduct}>
+            <button className='bg-dark mt-2' onClick={handleDeleteProduct}>
               Delete
             </button>
-            <button id='button' onClick={() => handleAddToCart(product)}>
+            <button className='mt-2'id='button' onClick={() => handleAddToCart(product)}>
               Add To Cart
             </button>
           </div>
