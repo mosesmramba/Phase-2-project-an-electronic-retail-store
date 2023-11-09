@@ -1,9 +1,15 @@
-#### The app is a simple Electronic retailk store project, 09/11/2023
+#### The app is a simple Electronic retail store project, 09/11/2023
 #### **By Moses Mramba**
 ## Project Description
 Its a simple Electronic retail store
 
 ## Setup/Installation Requirements
+ - Download zip in the code section of github to your desired folder
+    - Extract the files
+    - Open the folder with vs code.
+    - Then run "json-server --watch database.json" to run our server.
+    - The run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
+    - And your application will run.
 
 ## Live Link
 
@@ -79,8 +85,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ## Known Bugs
+The application image take a little time to load and when a new added product is added to cart the price calculation is wrong 
 
 ## Features
+A user can view the product 
+A user can create a new product/add a new product 
+A user can delete a product
+A user can edit/update a product
 
 ## Usage
 
