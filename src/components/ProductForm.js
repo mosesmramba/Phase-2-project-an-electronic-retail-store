@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2';
 
 export default function AddProduct() {
   const [product, setProduct] = useState({
@@ -7,20 +8,20 @@ export default function AddProduct() {
     price: '',
     image: '',
     specifications: {
-      RAM:'',
-      Battery:'',
-      'Screen Resolution':'',
-      'Internal Storage':'',
-      Network:'',
-      'Machine Operation':'',
+      RAM: '',
+      Battery: '',
+      'Screen Resolution': '',
+      'Internal Storage': '',
+      Network: '',
+      'Machine Operation': '',
       'Camera Resolution': '',
-      'Tub Type':'',
+      'Tub Type': '',
       Condition: '',
       'Video Resolution': '',
       Type: '',
       'Connection Type': '',
       Storage: '',
-      Brand: '',  
+      Brand: '',
       Duplex: '',
       Paper: '',
       'Print Technology': '',
@@ -65,6 +66,13 @@ export default function AddProduct() {
         .then((newProduct) => {
           console.log('Product added:', newProduct);
           setIsAdding(false);
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Product Added',
+            showConfirmButton: false,
+            timer: 1500,
+          });
         })
         .catch((error) => {
           console.error('Error adding product: ', error);
@@ -93,8 +101,15 @@ export default function AddProduct() {
           </div>
           <div className="form-group">
             <label htmlFor="category">Category:</label>
-            <select className="form-select" aria-label="Default select example" name="category" onChange={handleInputChange}>
-              <option selected disabled>Select Category</option>
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              name="category"
+              onChange={handleInputChange}
+            >
+              <option selected disabled>
+                Select Category
+              </option>
               <option value="Laptop">Laptop</option>
               <option value="Phones">Phones</option>
               <option value="Tablet">Tablet</option>
@@ -130,158 +145,17 @@ export default function AddProduct() {
           </div>
           <div className="form-group">
             <label>Specifications:</label>
-            <input
-              type="text"
-              name="Camera Resolution"
-              value={product.specifications['Camera Resolution']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Camera Resolution"
-            />
-            <input
-              type="text"
-              name="Condition"
-              value={product.specifications['Condition']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Condition"
-            />
-            <input
-              type="text"
-              name="Internal Storage"
-              value={product.specifications['Internal Storage']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Internal Storage"
-            />
-            <input
-              type="text"
-              name="RAM"
-              value={product.specifications['RAM']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="RAM"
-            />
-             <input
-              type="text"
-              name="Network"
-              value={product.specifications['Network']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Network"
-            />
-             <input
-              type="text"
-              name="Battery"
-              value={product.specifications['Battery']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Battery"
-            />
-             <input
-              type="text"
-              name="Tub Type"
-              value={product.specifications['Tub Type']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Tub Type"
-            />
-             <input
-              type="text"
-              name="Machine Operation"
-              value={product.specifications['Machine Operation']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Machine Operation"
-            />
-             <input
-              type="text"
-              name="Screen Resolution"
-              value={product.specifications['Screen Resolution']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Screen Resolution"
-            />
-            <input
-              type="text"
-              name="Video Resolution"
-              value={product.specifications['Video Resolution']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Video Resolution"
-            />
-            <input
-              type="text"
-              name="Type"
-              value={product.specifications['Type']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Type"
-            />
-            <input
-              type="text"
-              name="Connection Type"
-              value={product.specifications['Connection Type']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Connection Type"
-            />
-            <input
-              type="text"
-              name="Storage"
-              value={product.specifications['Storage']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Storage"
-            />
-            <input
-              type="text"
-              name="Brand"
-              value={product.specifications['Brand']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Brand"
-            />
-            <input
-              type="text"
-              name="Duplex"
-              value={product.specifications['Duplex']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Duplex"
-            />
-            <input
-              type="text"
-              name="Paper"
-              value={product.specifications['Paper']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Paper"
-            />
-            <input
-              type="text"
-              name="Print Technology"
-              value={product.specifications['Print Technology']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Print Technology"
-            />
-            <input
-              type="text"
-              name="Warranty"
-              value={product.specifications['Warranty']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Warranty"
-            />
-            <input
-              type="text"
-              name="Printer Ports"
-              value={product.specifications['Printer Ports']}
-              onChange={handleSpecification}
-              className="form-control"
-              placeholder="Printer Ports"
-            />
+            {Object.keys(product.specifications).map((key) => (
+              <input
+                key={key}
+                type="text"
+                name={key}
+                value={product.specifications[key]}
+                onChange={handleSpecification}
+                className="form-control"
+                placeholder={key}
+              />
+            ))}
           </div>
           <button
             type="button"

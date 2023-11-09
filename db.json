@@ -139,6 +139,34 @@
         "Battery": "Li-ion 4300 mAh",
         "Warranty": "2 years"
       }
+    },
+    {
+      "name": "Samsung Galaxy s23 Ultra 5G ",
+      "category": "Phones",
+      "price": "169999",
+      "image": "https://images.samsung.com/africa_en/smartphones/galaxy-s23-ultra/images/galaxy-s23-ultra-highlights-colors-green-back-s.jpg",
+      "specifications": {
+        "RAM": "12GB",
+        "Battery": "Li-Ion 5000 mAh",
+        "Screen Resolution": "",
+        "Internal Storage": "512GB",
+        "Network": "GSM/CDMA/HSPA/EVDO/LTE/5G",
+        "Machine Operation": "",
+        "Camera Resolution": "",
+        "Tub Type": "",
+        "Condition": "",
+        "Video Resolution": "",
+        "Type": "",
+        "Connection Type": "",
+        "Storage": "",
+        "Brand": "",
+        "Duplex": "",
+        "Paper": "",
+        "Print Technology": "",
+        "Warranty": "2 Years",
+        "Printer Ports": ""
+      },
+      "id": 11
     }
   ]
 }

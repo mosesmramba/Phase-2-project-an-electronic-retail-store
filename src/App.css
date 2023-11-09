@@ -52,3 +52,12 @@ footer #icons a{
 #button:hover {
   background-color: rgba(255, 187, 0, 0.678);
 }
+#delbutton{
+  background-color:  rgb(0, 0, 0);
+  color: rgb(255, 187, 0);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+
+}

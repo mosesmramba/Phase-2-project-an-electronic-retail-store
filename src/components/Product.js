@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export default function Product() {
   const { id } = useParams();
@@ -65,6 +66,7 @@ export default function Product() {
         setIsEditing(false);
       })
       .catch((error) => console.error('Error editing product: ', error));
+      Swal.fire("Product Updated");
   };
 
   const handleDeleteProduct = () => {
@@ -74,6 +76,11 @@ export default function Product() {
       .then(() => {
       })
       .catch((error) => console.error('Error deleting product: ', error));
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Product Deleted!",
+      });
   };
 
   const handleInputChange = (e) => {
@@ -155,7 +162,7 @@ export default function Product() {
             <button className="mt-2" id='button' onClick={handleEditClick}>
               Edit
             </button>
-            <button className='bg-dark mt-2' onClick={handleDeleteProduct}>
+            <button id ='delbutton'className='mt-2' onClick={handleDeleteProduct}>
               Delete
             </button>
             {/* <button className='mt-2'id='button' onClick={() => handleAddToCart(product)}>
