@@ -13,6 +13,7 @@ Its a simple Electronic retail store
 
 ## Live Link
 Deployed backend is in this Url https://e-retail-store.onrender.com/eproducts
+Deployed frontend is in this Url https://ornate-malasada-a6c907.netlify.app/
 
 # Getting Started with Create React App
 

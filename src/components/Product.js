@@ -9,7 +9,7 @@ export default function Product() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [isEditing, setIsEditing] = useState(false);
   const [editedProduct, setEditedProduct] = useState({});
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch(`https://e-retail-store.onrender.com/eproducts/${id}`)
